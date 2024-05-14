@@ -1,4 +1,6 @@
-﻿namespace LibraryAPIWebApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LibraryAPIWebApp.Models
 {
     public class Author
     {
@@ -9,6 +11,8 @@
 
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "Поле не повинно бути порожнім")]
+        [Display(Name = "Ім'я")]
         public string Name { get; set; }
 
         public string? Description { get; set; }

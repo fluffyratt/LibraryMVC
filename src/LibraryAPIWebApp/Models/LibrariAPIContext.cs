@@ -13,6 +13,8 @@ namespace LibraryAPIWebApp.Models
 
         public virtual DbSet<Category> Categories { get; set; }
 
+        public virtual DbSet<Status> Statuses { get; set; }
+
         public LibrariAPIContext(DbContextOptions <LibrariAPIContext> options)
             : base(options)
         {

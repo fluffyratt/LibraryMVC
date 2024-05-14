@@ -1,4 +1,6 @@
-﻿namespace LibraryAPIWebApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LibraryAPIWebApp.Models
 {
     public class Book
     {
@@ -8,6 +10,9 @@
         }
 
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Поле не повинно бути порожнім")]
+        [Display(Name = "Назва")]
         public string Title { get; set; }
 
         public string? Description { get; set; }
