@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x6xXQv5TuX1FyyEev3RLLoZraTtOGopKhOpxSpp3W4cjGEMUXXWyCjXWXVWab+AWQWzrrAJn0sk9eUSD7MckIg==",
+  "dgSpecHash": "0nmS5Moc6VB/glO8paWgVcgp8H9j5TmBfLkWEuFU16XTTnpopatWBGNTTbtH1PsAJFn7lbpYF131PTSSbb1yPw==",
   "success": true,
-  "projectFilePath": "D:\\ІСТП 2 лаба\\Laba\\src\\LibraryAPIWebApp\\LibraryAPIWebApp.csproj",
+  "projectFilePath": "C:\\Users\\45ksu\\Desktop\\LibraryAPIWebApp\\LibraryAPIWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\45ksu\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\45ksu\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

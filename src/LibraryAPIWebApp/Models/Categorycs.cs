@@ -10,9 +10,6 @@ namespace LibraryAPIWebApp.Models
         }
 
         public int Id { get; set; }
-
-        [Required(ErrorMessage = "Поле не повинно бути порожнім")]
-        [Display(Name = "Категорія")]
         public string Name { get; set; }
 
         public string Desctiption { get; set; }

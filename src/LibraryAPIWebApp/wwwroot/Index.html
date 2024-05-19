@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Бібліотека</title>
+    <link rel="stylesheet" href="css/site.css" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #258cfb;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #258cfb;
+            color: #fff;
+        }
+
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #135995;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input[type="text"],
+            .form-group textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+                .form-group input[type="text"]:focus,
+                .form-group textarea:focus {
+                    outline: none;
+                    border-color: #258cfb;
+                }
+
+            .form-group button[type="submit"] {
+                background-color: #258cfb;
+                color: #fff;
+                border: none;
+            }
+
+                .form-group button[type="submit"]:hover {
+                    background-color: #135995;
+                }
+
+        #editForm {
+            display: none;
+            margin-top: 20px;
+        }
+
+            #editForm button[type="button"] {
+                background-color: #dc3545;
+                color: #fff;
+            }
+
+                #editForm button[type="button"]:hover {
+                    background-color: #bd2130;
+                }
+    </style>
+</head>
+
+<body>
+    <h1>Бібліотека</h1>
+    <h3>Додати категорію</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addCategory()">
+        <input type="text" id="add-name" placeholder="Нова категорія">
+        <input type="text" id="add-desctiption" placeholder="Опис категорії">
+        <input type="submit" value="Додати">
+    </form>
+
+    <div id="editCategory">
+        <h3>Редагувати</h3>
+        <form action="javascript:void(0);" onsubmit="updateCategory()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-desctiption">
+            <input type="submit" value="Зберегти">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Назва</th>
+            <th>Опис</th>
+        </tr>
+        <tbody id="categories"></tbody>
+    </table>
+
+    <script src="js/lab2.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getCategories();
+    </script>
+</body>
+</html>

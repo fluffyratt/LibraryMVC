@@ -11,8 +11,6 @@ namespace LibraryAPIWebApp.Models
 
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Поле не повинно бути порожнім")]
-        [Display(Name = "Назва")]
         public string Title { get; set; }
 
         public string? Description { get; set; }
